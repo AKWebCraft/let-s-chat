@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const MONGODB_URI="mongodb+srv://arslankhalil660:ArslanKhalil@cluster-1.jpbha.mongodb.net/ChatApp?retryWrites=true&w=majority&appName=Cluster-1"
+// const MONGODB_URI="mongodb+srv://arslankhalil660:ArslanKhalil@cluster-1.jpbha.mongodb.net/ChatApp?retryWrites=true&w=majority&appName=Cluster-1"
 
 const dbConnect = async () => {
   try {
     mongoose.set("strictQuery", false);
     const connectionInstance = await mongoose.connect(
-      MONGODB_URI
+      process.env.DB_CONNTECTION_STRING
     );
     console.log(connectionInstance.connection.host);
   } catch (error) {

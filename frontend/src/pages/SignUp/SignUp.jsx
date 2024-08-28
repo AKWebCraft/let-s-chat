@@ -36,7 +36,7 @@ const SignUp = () => {
         fullName: response.data.user.fullName,
         username: response.data.user.username,
         auth: response.data.auth,
-        profilePic: response.data.profilePic,
+        profilePic: response.data.user.profilePic,
       };
 
       dispatch(setUser(user));

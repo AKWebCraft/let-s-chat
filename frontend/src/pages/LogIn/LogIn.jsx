@@ -22,14 +22,14 @@ const LogIn = () => {
     const response = await login(inputs);
     if (response.status === 200) {
       toast.success("Login Successfully");
-
+        
       // setUser
       const user = {
         _id: response.data.user._id,
         fullName: response.data.user.fullName,
         username: response.data.user.username,
         auth: response.data.auth,
-        profilePic: response.data.profilePic,
+        profilePic: response.data.user.profilePic,
       };
 
       dispatch(setUser(user));

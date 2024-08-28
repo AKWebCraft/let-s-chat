@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../images/pic.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setConversation } from "../../store/featuers/conversationSlice";
 import { useSocketContext } from "../../context/SocketContext";
